@@ -1,0 +1,30 @@
+.userscope-comp {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 99;
+}
+.logoimg{
+    width: 200rpx;
+    height: 200rpx;
+    display: inline-block;
+    margin: 80px 275rpx;
+}
+.btn-info {
+    width: 560rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    border-radius: 83rpx;
+    background-color: #00bc71;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 32rpx;
+    color: #fff;
+    margin: 0 auto;
+    border: 1px solid #00bc71;
+    padding-left: 0;
+    padding-right: 0;
+}

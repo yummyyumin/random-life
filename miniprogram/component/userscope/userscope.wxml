@@ -1,0 +1,8 @@
+<view class="userscope-comp">
+    <image class="logoimg" src="cloud://yummy-test-51f43b.89bb-yummy-test-51f43b/webimages/strategy.png"></image>
+     <button
+      class="btn-info" 
+      open-type="getUserInfo" 
+      bindgetuserinfo="getUserInfo"
+    >珍惜生命 远离暴食</button>
+</view>

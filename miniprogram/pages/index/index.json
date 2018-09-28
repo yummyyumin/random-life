@@ -1,1 +1,6 @@
-{}
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+      "user-scope": "./../../component/userscope/userscope"
+    }
+  }

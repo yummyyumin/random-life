@@ -3,14 +3,17 @@ const app = getApp()
 
 Page({
   data: {
+    isCanuse: false,
+    userInfo: null,
+
     avatarUrl: './user-unlogin.png',
     userInfo: {},
     logged: false,
-    takeSession: false,
     requestResult: ''
   },
 
   onLoad: function() {
+    
     if (!wx.cloud) {
       wx.redirectTo({
         url: '../chooseLib/chooseLib',
@@ -21,15 +24,14 @@ Page({
     // 获取用户信息
     wx.getSetting({
       success: res => {
-        console.log("是否授权:"+res.authSetting);
-        console.log("是否授权:"+res.authSetting['scope.userInfo']);
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
               this.setData({
                 avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
+                userInfo: res.userInfo,
+                isCanuse: true
               })
             }
           })
@@ -38,6 +40,14 @@ Page({
     })
 
   },
+  // onShow: function () {
+
+  //   this.setData({
+  //     userInfo: app.globalData.userInfo,
+  //     isCanuse: app.globalData.isAuth
+  //   })
+
+  // },
 
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {

@@ -1,5 +1,6 @@
-<!--index.wxml-->
+<user-scope wx:if="{{!isCanuse}}" />
 <view class="container">
+  <!-- indexbanner -->
 
   <!-- 用户 openid -->
   <view class="userinfo">
