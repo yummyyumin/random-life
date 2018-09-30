@@ -6,6 +6,7 @@ Page({
     isCanuse: false,
     userInfo: null,
 
+
     avatarUrl: './user-unlogin.png',
     userInfo: {},
     logged: false,
@@ -13,12 +14,12 @@ Page({
   },
 
   onLoad: function() {
-    
+
     if (!wx.cloud) {
       wx.redirectTo({
         url: '../chooseLib/chooseLib',
       })
-      return
+      return;
     }
 
     // 获取用户信息
